@@ -1,0 +1,48 @@
+.navbar {
+  background-color: #000;
+  margin-bottom: 0;
+}
+header {
+  background-image: url(../img/chocochip.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 500px;
+  padding: 8em;
+}
+
+header div {
+  width: 500px;
+  background-color: #fff;
+  padding: 4em;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-70 {
+  width: 70%;
+}
+
+.col-30 {
+  width: 30%;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+#mainSection .col-70 {
+  order: 1;
+}
+
+#mainSection .col-30 {
+  order: 2;
+}
+
+footer {
+  height: 200px;
+}
