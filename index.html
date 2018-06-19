@@ -5,16 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Shooky's Cookies</title>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-  <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="./style/css/main.css">
 </head>
 
@@ -23,13 +16,12 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
               <a class="navbar-brand" href="#">Shooky's Cookies</a>
 
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon navbar-light"></span>
               </button>
 
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -37,9 +29,11 @@
                       <li class="nav-item active">
                           <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
                       </li>
+                      <div class="divider"></div>
                       <li class="nav-item">
                           <a class="nav-link" href="#">Blog</a>
                       </li>
+                      <div class="divider"></div>
                       <li class="nav-item">
                           <a class="nav-link" href="#">Visit</a>
                       </li>
@@ -48,7 +42,7 @@
         </div>
     </nav>
     <header>
-        <div id="headerWrapper">
+        <div id="bannerContent">
             <div>
                 <div class="text-left">
                     <h1>Baked fresh,</h1>
@@ -62,7 +56,7 @@
         </div>
     </header>
     <div class="container">
-    <section id="mainSection">
+    <section id="cookieSection">
         <h2>Our Cookies</h2>
             <div class="flex">
                 <div class="col-35">
@@ -137,7 +131,7 @@
           <div class="col-20">
               <h3>Shooky's Cookies</h3>
           </div>
-          <div class="col-13">
+          <div class="col-15">
           </div>
           <div class="col-13">
               <p>Phone</p>
@@ -152,20 +146,37 @@
       </div>
   </footer>
 
-
-
-
-    <!-- <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 
-  <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function() {
+	// let cookieWrapper = document.querySelectorAll(".cookieWrapper");
+	//
+	// cookieWrapper.onmouseover = function() {
+	//   console.log("ff");
+	//   document.querySelectorAll("orangeBox").className = "orangeBoxMoved";
+	// };
 
-
+	$(window).scroll(function() {
+		$("#blogSection").css({
+			top: $(".container").height() / 2 - $(this).scrollTop() * 0.5
+		});
+	});
+	$(".cookieWrapper").mouseover(function() {
+		$(this)
+			.find(".orangeBox")
+			.addClass("orangBoxMoved");
+	});
+	$(".cookieWrapper").mouseout(function() {
+		$(this)
+			.find(".orangeBox")
+			.removeClass("orangBoxMoved");
+	});
+});
+</script>
 
 </body>
 
