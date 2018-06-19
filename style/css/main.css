@@ -1,6 +1,75 @@
+/*================Shared styles=======================*/
 body {
   font-family: "Roboto", sans-serif; }
 
+h1,
+h2,
+h3 {
+  color: #ff4a1d; }
+
+h1 {
+  line-height: 1; }
+
+h2 {
+  margin: 2em 25px 1em;
+  font-size: 2.5em; }
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 1em 0; }
+
+button {
+  height: 50px;
+  width: 150px;
+  border: none; }
+
+.orangeButton {
+  background-color: #ff4a1d;
+  color: #fff;
+  position: absolute;
+  bottom: -25px;
+  right: 45px;
+  -webkit-transition: background-color 0.5s;
+  /* Safari */
+  transition: background-color 0.5s; }
+  .orangeButton:hover {
+    background-color: #1e152a; }
+  .orangeButton:focus {
+    background-color: #1e152a; }
+  .orangeButtonactive {
+    background-color: #1e152a; }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.col-65 {
+  width: 65%; }
+
+.col-35 {
+  width: 35%; }
+
+.col-30 {
+  width: 30%; }
+
+.col-50 {
+  width: 50%; }
+
+.col-20 {
+  width: 20%; }
+
+.col-13 {
+  width: 13%; }
+
+section a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600; }
+
+/*================Navbar=======================*/
 .navbar {
   background-color: #1e152a;
   margin-bottom: 0;
@@ -9,6 +78,12 @@ body {
 .navbar-brand {
   color: #ff4a1d;
   font-size: 1.4em; }
+  .navbar-brand:hover {
+    color: #fff; }
+  .navbar-brand:focus {
+    color: #fff; }
+  .navbar-brand:active {
+    color: #fff; }
 
 .navbar-nav .nav-link {
   color: #fff;
@@ -25,6 +100,7 @@ body {
   .navbar-nav .nav-linkactive {
     color: #ff4a1d; }
 
+/*================Banner=======================*/
 header {
   background-image: url(../../img/chocochip.jpg);
   background-repeat: no-repeat;
@@ -32,7 +108,7 @@ header {
   background-attachment: fixed;
   background-size: cover;
   min-height: 500px;
-  padding: 8em; }
+  padding: 8em 8em 10em; }
 
 #headerWrapper {
   width: 500px;
@@ -46,40 +122,104 @@ header {
     font-weight: 300;
     margin-top: 2em; }
 
-h1 {
-  color: #ff4a1d;
-  line-height: 1; }
-
-button {
-  height: 50px;
-  width: 150px;
-  border: none; }
-
-.orangeButton {
-  background-color: #ff4a1d;
-  color: #fff;
-  position: absolute;
-  bottom: -25px;
-  right: 45px; }
-
-.flex {
-  display: flex;
-  flex-direction: row; }
-
-.col-70 {
-  width: 70%; }
-
-.col-30 {
-  width: 30%; }
-
-.col-50 {
-  width: 50%; }
-
-#mainSection .col-70 {
+/*================Cookie section=======================*/
+#mainSection .col-65 {
   order: 1; }
 
-#mainSection .col-30 {
-  order: 2; }
+#mainSection .col-35 {
+  order: 2;
+  padding: 0 0 0 5em; }
 
+#mainSection p {
+  font-weight: 300; }
+
+.relative {
+  position: relative; }
+
+.cookieWrapper {
+  padding: 2em;
+  margin-bottom: 2em; }
+
+.orangeBox {
+  background-color: #ff4a1d;
+  position: absolute;
+  right: 10px;
+  bottom: -36px;
+  top: 50px;
+  left: 50px;
+  z-index: -5;
+  display: flex; }
+  .orangeBox h4 {
+    color: #fff;
+    margin-top: auto;
+    font-size: 1.4em;
+    margin: auto 1em 1em;
+    font-weight: 400; }
+
+/*================Blog section=======================*/
+#blogSection h2 {
+  margin-bottom: 0; }
+
+#blogSection h3 {
+  padding-left: 25px;
+  font-size: 1.4em; }
+
+#blogSection h4 {
+  font-weight: 400;
+  font-size: 1.4em; }
+
+#blogSection .col-30 {
+  padding: 25px; }
+
+#blogSection p {
+  font-weight: 300; }
+
+#blogSection a {
+  color: #ff4a1d; }
+  #blogSection a:hover {
+    color: #1e152a; }
+  #blogSection a:focus {
+    color: #1e152a; }
+  #blogSection a:active {
+    color: #1e152a; }
+
+.divider {
+  width: 50px;
+  border: 1px solid #ff4a1d;
+  margin-bottom: 1em; }
+
+/*================Footer section=======================*/
 footer {
-  height: 200px; }
+  background-color: #ff4a1d;
+  color: #fff;
+  margin-top: 3em; }
+  footer .container {
+    padding: 3em 25px; }
+  footer h3 {
+    color: #fff;
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: 400; }
+  footer p {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px; }
+
+/*================Media queries=======================*/
+@media only screen and (max-width: 768px) {
+  #mainSection .col-65 {
+    order: 2;
+    width: 100%;
+    flex: 1; }
+  #mainSection .col-35 {
+    order: 1;
+    width: 100%; }
+  #blogSection h3 {
+    display: none; }
+  #blogSection .col-30 {
+    width: 100%; }
+  footer .col-20 {
+    width: 100%;
+    padding-bottom: 3em; }
+  footer .container .col-13:first-child {
+    display: none; } }
