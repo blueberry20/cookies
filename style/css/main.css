@@ -128,7 +128,8 @@ header {
   background-color: #fff;
   padding: 3em;
   margin-left: auto;
-  position: relative; }
+  position: relative;
+  transition: top 0.5s; }
   #bannerContent div {
     width: 300px; }
   #bannerContent p {
@@ -172,9 +173,10 @@ header {
     margin: auto 1em 1em;
     font-weight: 400; }
 
-.orangBoxMoved {
+.cookieWrapper .orangBoxMoved {
   right: 2em;
-  left: 0; }
+  left: 2em;
+  background-color: #1e152a; }
 
 /*================Blog section=======================*/
 #blogSection h2 {
@@ -205,7 +207,7 @@ header {
 
 .divider {
   width: 50px;
-  height: 1px;
+  height: 2px;
   background-color: #ff4a1d;
   margin-bottom: 1em; }
 
@@ -255,37 +257,39 @@ footer {
     width: 150px;
     display: block; }
   header {
-    min-height: auto;
     padding: 5em 5em 7em; }
   #bannerContent {
     width: 90%;
     margin: 0 auto; }
   h2 {
     margin: 2em 0 0.5em; }
+  .mobile-100 {
+    width: 100%; }
+  .mobile-70 {
+    width: 70%; }
   #cookieSection .col-65 {
     order: 2;
-    width: 100%;
     flex: 1; }
   #cookieSection .col-35 {
     order: 1;
-    width: 100%;
     padding: 0; }
   .cookieWrapper {
     padding: 0 2em 1em 0;
     margin-bottom: 4em; }
-  .orangeBox {
-    right: 20px;
-    left: 20px;
-    bottom: -50px; }
+    .cookieWrapper .orangeBox {
+      right: 20px;
+      left: 20px;
+      bottom: -50px; }
+    .cookieWrapper .orangBoxMoved {
+      right: 2em;
+      left: 0; }
   #blogSection h3 {
     display: none; }
   #blogSection .col-30 {
-    width: 100%;
     padding: 1em 0; }
   footer {
     margin-top: 3em; }
     footer .col-20 {
-      width: 100%;
       padding-bottom: 3em; }
     footer .col-15 {
       display: none; }
@@ -296,15 +300,17 @@ footer {
   .navbar {
     padding: 10px; }
     .navbar .navbar-brand {
-      font-size: 1em; }
+      font-size: 1.2em;
+      margin-left: 20px; }
   header {
-    padding: 2em 1em 3em; }
+    padding: 2em 1.5em 3em;
+    min-height: auto; }
     header h1 {
       font-size: 1.4em; }
     header #bannerContent {
       width: 100%;
       margin: 0 auto;
-      padding: 1em; }
+      padding: 1em 1em 2em; }
       header #bannerContent div {
         width: auto; }
       header #bannerContent .text-right h1 {
@@ -321,19 +327,21 @@ footer {
     padding: 2em; }
   h2 {
     margin: 2em 0 0.5em;
-    font-size: 1.3em; }
+    font-size: 1.5em; }
   h3 {
     font-size: 1em; }
+  .xs {
+    width: 25%; }
   .orangeBox {
     left: 10px; }
     .orangeBox h4 {
       font-size: 1em;
       margin: auto 10px 10px; }
-  #blogSection h2 {
-    margin-bottom: 1em; }
+  #blogSection {
+    padding-top: 1em; }
+    #blogSection h2 {
+      margin-bottom: 1em; }
+    #blogSection h4 {
+      font-size: 1.2em; }
   footer h3 {
-    font-size: 1em; }
-  footer .col-13 {
-    width: 25%; }
-  footer .col-30 {
-    width: 75%; } }
+    font-size: 1em; } }
